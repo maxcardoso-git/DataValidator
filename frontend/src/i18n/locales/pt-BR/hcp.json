@@ -1,0 +1,148 @@
+{
+  "title": "Validação de HCP",
+  "backToSearch": "Voltar à busca",
+  "loading": "Carregando...",
+  "tabs": {
+    "general": "Dados Gerais",
+    "crm": "CRM",
+    "addresses": "Endereços",
+    "phones": "Telefones",
+    "emails": "E-mails",
+    "organizations": "Organizações",
+    "additional": "Info Adicional",
+    "audit": "Auditoria"
+  },
+  "general": {
+    "id": "ID HCP",
+    "name": "Nome do Médico",
+    "status": "Status",
+    "qualityScore": "Score de Qualidade"
+  },
+  "crm": {
+    "title": "Registros CRM",
+    "registration": "Inscrição",
+    "state": "Estado",
+    "type": "Tipo",
+    "status": "Situação",
+    "graduationYear": "Ano Formatura",
+    "institution": "Instituição",
+    "specialties": "Especialidades",
+    "empty": "Nenhum CRM cadastrado"
+  },
+  "address": {
+    "title": "Endereços",
+    "type": "Tipo",
+    "street": "Logradouro",
+    "number": "Número",
+    "complement": "Complemento",
+    "neighborhood": "Bairro",
+    "city": "Município",
+    "state": "Estado",
+    "zipCode": "CEP",
+    "country": "País",
+    "full": "Endereço Completo",
+    "empty": "Nenhum endereço cadastrado"
+  },
+  "phone": {
+    "title": "Telefones",
+    "number": "Telefone",
+    "empty": "Nenhum telefone cadastrado"
+  },
+  "email": {
+    "title": "E-mails",
+    "address": "E-mail",
+    "empty": "Nenhum e-mail cadastrado"
+  },
+  "organization": {
+    "title": "Organizações",
+    "name": "Nome/Razão Social",
+    "tradeName": "Nome Fantasia",
+    "cnes": "CNES",
+    "cnpj": "CNPJ",
+    "competence": "Competência",
+    "bond": "Vínculo",
+    "activity": "Atuação",
+    "status": "Situação",
+    "specialty": "Especialidade",
+    "address": "Endereço",
+    "zipCode": "CEP",
+    "empty": "Nenhuma organização cadastrada"
+  },
+  "additional": {
+    "title": "Informações Adicionais",
+    "laboratory": "Laboratório",
+    "loadDate": "Data Carga",
+    "region": "Região",
+    "supervisor": "Supervisor",
+    "active": "Ativo",
+    "name": "Nome",
+    "closeupRegion": "Região Close-Up",
+    "closeupId": "ID Close-Up",
+    "origin": "Origem",
+    "organization": "Organização",
+    "empty": "Nenhuma informação adicional"
+  },
+  "validation": {
+    "title": "Regras de Validação",
+    "runValidation": "Validar",
+    "running": "Validando...",
+    "noRules": "Clique em 'Validar' para executar as regras de validação.",
+    "lastRun": "Última validação",
+    "passed": "Passou",
+    "failed": "Falhou",
+    "errors": "Erros",
+    "warnings": "Avisos"
+  },
+  "decision": {
+    "title": "Registrar Decisão",
+    "selectItems": "Selecione os itens para a decisão",
+    "selectAll": "Selecionar todos",
+    "comments": "Observações",
+    "commentsPlaceholder": "Observações sobre a decisão...",
+    "relatedHcp": "HCP Relacionado",
+    "relatedHcpPlaceholder": "Ex: HCP002",
+    "relatedHcpRequired": "Informe o ID do HCP relacionado",
+    "actions": {
+      "validate": "Validar",
+      "correct": "Corrigir",
+      "reject": "Rejeitar",
+      "duplicate": "Duplicado"
+    },
+    "selected": "{{count}} selecionado",
+    "selected_plural": "{{count}} selecionados"
+  },
+  "history": {
+    "title": "Histórico de Decisões",
+    "user": "Usuário",
+    "date": "Data",
+    "type": "Tipo",
+    "comments": "Comentários",
+    "items": "Itens",
+    "linkedHcp": "HCP vinculado",
+    "empty": "Nenhuma decisão registrada"
+  },
+  "audit": {
+    "title": "Trilha de Auditoria",
+    "action": "Ação",
+    "user": "Usuário",
+    "date": "Data",
+    "details": "Detalhes",
+    "empty": "Nenhum registro de auditoria"
+  },
+  "messages": {
+    "validationSuccess": "Validação executada com sucesso!",
+    "decisionSuccess": "Decisão registrada com sucesso!",
+    "pdfSuccess": "PDF gerado com sucesso!"
+  },
+  "errors": {
+    "loadFailed": "Erro ao carregar registro",
+    "validationFailed": "Erro ao executar validação",
+    "decisionFailed": "Erro ao registrar decisão",
+    "pdfFailed": "Erro ao gerar PDF",
+    "passwordRequired": "Senha é obrigatória"
+  },
+  "pdf": {
+    "generate": "PDF",
+    "generating": "Gerando..."
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "title": "Validación de HCP",
+  "backToSearch": "Volver a búsqueda",
+  "loading": "Cargando...",
+  "tabs": {
+    "general": "Datos Generales",
+    "crm": "CRM",
+    "addresses": "Direcciones",
+    "phones": "Teléfonos",
+    "emails": "Correos",
+    "organizations": "Organizaciones",
+    "additional": "Info Adicional",
+    "audit": "Auditoría"
+  },
+  "general": {
+    "id": "ID HCP",
+    "name": "Nombre del Médico",
+    "status": "Estado",
+    "qualityScore": "Score de Calidad"
+  },
+  "crm": {
+    "title": "Registros CRM",
+    "registration": "Inscripción",
+    "state": "Estado",
+    "type": "Tipo",
+    "status": "Situación",
+    "graduationYear": "Año Graduación",
+    "institution": "Institución",
+    "specialties": "Especialidades",
+    "empty": "Ningún CRM registrado"
+  },
+  "address": {
+    "title": "Direcciones",
+    "type": "Tipo",
+    "street": "Calle",
+    "number": "Número",
+    "complement": "Complemento",
+    "neighborhood": "Barrio",
+    "city": "Ciudad",
+    "state": "Estado",
+    "zipCode": "Código Postal",
+    "country": "País",
+    "full": "Dirección Completa",
+    "empty": "Ninguna dirección registrada"
+  },
+  "phone": {
+    "title": "Teléfonos",
+    "number": "Teléfono",
+    "empty": "Ningún teléfono registrado"
+  },
+  "email": {
+    "title": "Correos Electrónicos",
+    "address": "Correo",
+    "empty": "Ningún correo registrado"
+  },
+  "organization": {
+    "title": "Organizaciones",
+    "name": "Razón Social",
+    "tradeName": "Nombre Comercial",
+    "cnes": "CNES",
+    "cnpj": "CNPJ",
+    "competence": "Competencia",
+    "bond": "Vínculo",
+    "activity": "Actividad",
+    "status": "Situación",
+    "specialty": "Especialidad",
+    "address": "Dirección",
+    "zipCode": "Código Postal",
+    "empty": "Ninguna organización registrada"
+  },
+  "additional": {
+    "title": "Información Adicional",
+    "laboratory": "Laboratorio",
+    "loadDate": "Fecha Carga",
+    "region": "Región",
+    "supervisor": "Supervisor",
+    "active": "Activo",
+    "name": "Nombre",
+    "closeupRegion": "Región Close-Up",
+    "closeupId": "ID Close-Up",
+    "origin": "Origen",
+    "organization": "Organización",
+    "empty": "Sin información adicional"
+  },
+  "validation": {
+    "title": "Reglas de Validación",
+    "runValidation": "Validar",
+    "running": "Validando...",
+    "noRules": "Haz clic en 'Validar' para ejecutar las reglas de validación.",
+    "lastRun": "Última validación",
+    "passed": "Aprobó",
+    "failed": "Falló",
+    "errors": "Errores",
+    "warnings": "Advertencias"
+  },
+  "decision": {
+    "title": "Registrar Decisión",
+    "selectItems": "Selecciona los ítems para la decisión",
+    "selectAll": "Seleccionar todos",
+    "comments": "Observaciones",
+    "commentsPlaceholder": "Observaciones sobre la decisión...",
+    "relatedHcp": "HCP Relacionado",
+    "relatedHcpPlaceholder": "Ej: HCP002",
+    "relatedHcpRequired": "Ingresa el ID del HCP relacionado",
+    "actions": {
+      "validate": "Validar",
+      "correct": "Corregir",
+      "reject": "Rechazar",
+      "duplicate": "Duplicado"
+    },
+    "selected": "{{count}} seleccionado",
+    "selected_plural": "{{count}} seleccionados"
+  },
+  "history": {
+    "title": "Historial de Decisiones",
+    "user": "Usuario",
+    "date": "Fecha",
+    "type": "Tipo",
+    "comments": "Comentarios",
+    "items": "Ítems",
+    "linkedHcp": "HCP vinculado",
+    "empty": "Ninguna decisión registrada"
+  },
+  "audit": {
+    "title": "Registro de Auditoría",
+    "action": "Acción",
+    "user": "Usuario",
+    "date": "Fecha",
+    "details": "Detalles",
+    "empty": "Sin registros de auditoría"
+  },
+  "messages": {
+    "validationSuccess": "Validación ejecutada con éxito!",
+    "decisionSuccess": "Decisión registrada con éxito!",
+    "pdfSuccess": "PDF generado con éxito!"
+  },
+  "errors": {
+    "loadFailed": "Error al cargar registro",
+    "validationFailed": "Error al ejecutar validación",
+    "decisionFailed": "Error al registrar decisión",
+    "pdfFailed": "Error al generar PDF",
+    "passwordRequired": "Contraseña es obligatoria"
+  },
+  "pdf": {
+    "generate": "PDF",
+    "generating": "Generando..."
+  }
+}

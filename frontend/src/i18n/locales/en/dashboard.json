@@ -1,0 +1,34 @@
+{
+  "title": "Dashboard",
+  "subtitle": "MDM validation system overview",
+  "loading": "Loading statistics...",
+  "error": "Error loading statistics",
+  "cards": {
+    "totalHcps": "Total HCPs",
+    "validated": "Validated",
+    "pendingReview": "Pending Review",
+    "duplicates": "Identified Duplicates"
+  },
+  "sections": {
+    "statusDistribution": "Status Distribution",
+    "systemUsers": "System Users",
+    "recentUploads": "Recent Uploads"
+  },
+  "stats": {
+    "validationRate": "Validation Rate",
+    "activeUsers": "Active users",
+    "totalUsers": "Total",
+    "ofTotal": "of total"
+  },
+  "table": {
+    "file": "File",
+    "user": "User",
+    "status": "Status",
+    "records": "Records",
+    "date": "Date"
+  },
+  "empty": {
+    "noUploads": "No uploads yet",
+    "goToUpload": "Go to upload"
+  }
+}

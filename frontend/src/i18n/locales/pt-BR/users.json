@@ -1,0 +1,41 @@
+{
+  "title": "Gerenciar Usuários",
+  "subtitle": "Crie e gerencie usuários do sistema",
+  "buttons": {
+    "newUser": "Novo Usuário",
+    "edit": "Editar",
+    "activate": "Ativar",
+    "deactivate": "Desativar"
+  },
+  "table": {
+    "username": "Usuário",
+    "role": "Role",
+    "status": "Status",
+    "createdAt": "Criado em",
+    "actions": "Ações"
+  },
+  "modal": {
+    "newUser": "Novo Usuário",
+    "editUser": "Editar Usuário"
+  },
+  "form": {
+    "username": "Usuário",
+    "usernamePlaceholder": "Nome de usuário",
+    "password": "Senha",
+    "passwordPlaceholder": "Senha",
+    "passwordHelp": "deixe em branco para manter",
+    "role": "Role",
+    "selectRole": "Selecione um role"
+  },
+  "messages": {
+    "created": "Usuário criado com sucesso!",
+    "updated": "Usuário atualizado com sucesso!",
+    "activated": "Usuário ativado",
+    "deactivated": "Usuário desativado"
+  },
+  "errors": {
+    "loadFailed": "Erro ao carregar usuários",
+    "saveFailed": "Erro ao salvar usuário",
+    "toggleFailed": "Erro ao alterar status do usuário"
+  }
+}

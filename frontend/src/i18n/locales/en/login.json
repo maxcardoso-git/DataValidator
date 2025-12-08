@@ -1,0 +1,16 @@
+{
+  "title": "MDM Validation",
+  "subtitle": "HCP Validation System",
+  "form": {
+    "username": "Username",
+    "password": "Password",
+    "usernamePlaceholder": "Enter your username",
+    "passwordPlaceholder": "Enter your password",
+    "submit": "Sign In",
+    "submitting": "Signing in..."
+  },
+  "footer": {
+    "company": "Close-Up International - 200DEV",
+    "version": "v1.0.0"
+  }
+}

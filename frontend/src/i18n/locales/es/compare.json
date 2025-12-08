@@ -1,0 +1,40 @@
+{
+  "title": "Comparar Registros",
+  "subtitle": "Compara dos registros HCP lado a lado",
+  "loading": "Cargando registros...",
+  "badges": {
+    "recordA": "Registro A",
+    "recordB": "Registro B"
+  },
+  "sections": {
+    "fieldComparison": "Comparación de Campos"
+  },
+  "fields": {
+    "name": "Nombre",
+    "primaryCrm": "CRM Principal",
+    "crmStatus": "Estado CRM",
+    "specialties": "Especialidades",
+    "phones": "Teléfonos",
+    "emails": "Correos",
+    "city": "Ciudad",
+    "state": "Estado",
+    "organizations": "Organizaciones"
+  },
+  "actions": {
+    "keepA": "Mantener A",
+    "keepB": "Mantener B",
+    "duplicate": "Duplicado",
+    "notRelated": "No Relacionado"
+  },
+  "help": {
+    "duplicateWarning": "Al marcar como 'Duplicado', el registro con menor score será vinculado al de mayor score."
+  },
+  "messages": {
+    "decisionSuccess": "Decisión registrada con éxito!",
+    "notFound": "Registros no encontrados"
+  },
+  "errors": {
+    "loadFailed": "Error al cargar registros para comparación",
+    "decisionFailed": "Error al registrar decisión"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Search HCP Records",
+  "subtitle": "Search and select records for validation",
+  "form": {
+    "searchType": "Search type",
+    "searchTypeName": "Name",
+    "searchTypeCrm": "CRM",
+    "searchTypeId": "ID",
+    "placeholder": "Type to search...",
+    "statusFilter": "Filter by status",
+    "allStatus": "All statuses",
+    "searchButton": "Search"
+  },
+  "compare": {
+    "button": "Compare Selected",
+    "selectTwo": "Select two records to compare"
+  },
+  "table": {
+    "select": "Select",
+    "id": "ID",
+    "name": "Name",
+    "primaryCrm": "Primary CRM",
+    "score": "Score",
+    "status": "Status",
+    "actions": "Actions",
+    "viewDetails": "View details"
+  },
+  "pagination": {
+    "showing": "Showing",
+    "to": "to",
+    "of": "of",
+    "records": "records",
+    "page": "Page",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "empty": {
+    "noResults": "No records found",
+    "typeToSearch": "Type to search records"
+  },
+  "errors": {
+    "loadFailed": "Error loading records"
+  }
+}

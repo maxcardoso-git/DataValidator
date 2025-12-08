@@ -1,0 +1,40 @@
+{
+  "title": "Compare Records",
+  "subtitle": "Compare two HCP records side by side",
+  "loading": "Loading records...",
+  "badges": {
+    "recordA": "Record A",
+    "recordB": "Record B"
+  },
+  "sections": {
+    "fieldComparison": "Field Comparison"
+  },
+  "fields": {
+    "name": "Name",
+    "primaryCrm": "Primary CRM",
+    "crmStatus": "CRM Status",
+    "specialties": "Specialties",
+    "phones": "Phones",
+    "emails": "Emails",
+    "city": "City",
+    "state": "State",
+    "organizations": "Organizations"
+  },
+  "actions": {
+    "keepA": "Keep A",
+    "keepB": "Keep B",
+    "duplicate": "Duplicate",
+    "notRelated": "Not Related"
+  },
+  "help": {
+    "duplicateWarning": "When marking as 'Duplicate', the record with the lower score will be linked to the one with the higher score."
+  },
+  "messages": {
+    "decisionSuccess": "Decision recorded successfully!",
+    "notFound": "Records not found"
+  },
+  "errors": {
+    "loadFailed": "Error loading records for comparison",
+    "decisionFailed": "Error recording decision"
+  }
+}

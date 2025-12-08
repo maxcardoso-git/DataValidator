@@ -1,0 +1,177 @@
+{
+    "_id": "69308c51a1de402b933a50bb",
+    "score": 100,
+    "trilha_auditoria": [],
+    "nome_medico": "ADERBAL GARCIA BERNARDES JUNIOR",
+    "crm": [
+        {
+            "ordem": 1,
+            "score": 100,
+            "trilha_auditoria": [],
+            "estado": "MG",
+            "inscricao": "23381",
+            "tipo": "Principal",
+            "ano_formatura": "1984",
+            "instituicao_graduacao": "UFMS",
+            "situacao": "Ativo",
+            "especialidades": [
+                {
+                    "rqe": "6746",
+                    "especialidade": "CANCEROLOGIA"
+                },
+                {
+                    "rqe": "64698",
+                    "especialidade": "CIRURGIA DE CABECA E PESCOCO"
+                },
+                {
+                    "rqe": "64637",
+                    "especialidade": "CIRURGIA DO APARELHO DIGESTIVO"
+                },
+                {
+                    "rqe": "64634",
+                    "especialidade": "CIRURGIA GERAL"
+                },
+                {
+                    "rqe": "64638",
+                    "especialidade": "GINECOLOGIA E OBSTETRICIA"
+                },
+                {
+                    "rqe": "64696",
+                    "especialidade": "MASTOLOGIA"
+                },
+                {
+                    "rqe": "7358",
+                    "especialidade": "MEDICINA DO TRABALHO"
+                },
+                {
+                    "rqe": "64695",
+                    "especialidade": "MEDICINA INTENSIVA"
+                },
+                {
+                    "rqe": "64472",
+                    "especialidade": "NUTROLOGIA"
+                }
+            ]
+        }
+    ],
+    "enderecos": [
+        {
+            "ordem": "1",
+            "score": 100,
+            "trilha_auditoria": [],
+            "cep": "38060040",
+            "endereco": "RUA AFONSO RATO, 338 - MERCES, UBERABA - MG, BRASIL (-19.7446092,-47.9428187)",
+            "tipo": "RUA",
+            "logradouro": "AFONSO RATO",
+            "numero": "338",
+            "complemento": "",
+            "bairro": "MERCES",
+            "municipio": "UBERABA",
+            "estado": "MG",
+            "pais": "BRASIL",
+            "latitude": "-19.7446092",
+            "longitude": "-47.9428187"
+        },
+        {
+            "ordem": "2",
+            "score": 100,
+            "trilha_auditoria": [],
+            "cep": "38025440",
+            "endereco": "AVENIDA GETULIO GUARITA, 30 - NOSSA SENHORA DA ABADIA, UBERABA - MG, BRASIL (-19.7551244,-47.9328597)",
+            "tipo": "AVENIDA",
+            "logradouro": "GETULIO GUARITA",
+            "numero": "30",
+            "complemento": "",
+            "bairro": "NOSSA SENHORA DA ABADIA",
+            "municipio": "UBERABA",
+            "estado": "MG",
+            "pais": "BRASIL",
+            "latitude": "-19.7551244",
+            "longitude": "-47.9328597"
+        }
+    ],
+    "telefones": [
+        {
+            "ordem": "1",
+            "score": 100,
+            "trilha_auditoria": [],
+            "telefone": "553433189800"
+        },
+        {
+            "ordem": "2",
+            "score": 100,
+            "trilha_auditoria": [],
+            "telefone": "553431858910"
+        },
+        {
+            "ordem": "3",
+            "score": 100,
+            "trilha_auditoria": [],
+            "telefone": "553499784554"
+        }
+    ],
+    "emails": [
+        {
+            "ordem": "1",
+            "score": 100,
+            "trilha_auditoria": [],
+            "email": "aderbalgbj@gmail.com"
+        }
+    ],
+    "organizacoes": [
+        {
+            "ordem": "1",
+            "score": 100,
+            "trilha_auditoria": [],
+            "cnes": "9847227",
+            "competencia": "202411",
+            "vinculo": "AUTONOMO",
+            "atuacao": "SUS",
+            "situacao": "MANTEM",
+            "especialidade": "MEDICO CLINICO",
+            "nome_razao": "PREFEITURA MUNICIPAL DE MONTE CARMELO",
+            "nome_fantasia": "HOSPITAL MUNICIPAL ALBERTO NOGUEIRA",
+            "cnpj": "",
+            "endereco": "RUA ODILON RODRIGUES DA CUNHA, 462 - BOA VISTA",
+            "cep": "38500000"
+        }
+    ],
+    "informacao_adicional": [
+        {
+            "laboratorio": "",
+            "data_carga": "",
+            "regiao": "",
+            "supervisor": "",
+            "ativo": "",
+            "nome": "",
+            "regiao_closeup": "26",
+            "id_closeup": "5163601.00000",
+            "origem": "MAESTRO",
+            "organizacao": ""
+        },
+        {
+            "laboratorio": "FRESENIUS",
+            "data_carga": "2023-07-03 11:31:33.000",
+            "regiao": "100002",
+            "supervisor": "160017",
+            "ativo": "160563",
+            "nome": "JULIANA DE PARIS TERRAO",
+            "regiao_closeup": "",
+            "id_closeup": "",
+            "origem": "CRM",
+            "organizacao": "178767.00000"
+        },
+        {
+            "laboratorio": "EMS",
+            "data_carga": "2024-11-05 00:00:00.000",
+            "regiao": "14",
+            "supervisor": "30",
+            "ativo": "209",
+            "nome": "11430209",
+            "regiao_closeup": "026",
+            "id_closeup": "5163601.00000",
+            "origem": "FICHEIRO",
+            "organizacao": ""
+        }
+    ]
+}

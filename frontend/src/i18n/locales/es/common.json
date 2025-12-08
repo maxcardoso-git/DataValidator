@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "search": "Buscar HCPs",
+    "upload": "Carga de Datos",
+    "users": "Usuarios",
+    "dashboard": "Dashboard"
+  },
+  "sidebar": {
+    "title": "MDM Validation",
+    "company": "Close-Up International"
+  },
+  "auth": {
+    "logout": "Salir",
+    "role": "Rol",
+    "loginSuccess": "Inicio de sesión exitoso!",
+    "logoutSuccess": "Cierre de sesión exitoso!"
+  },
+  "buttons": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "create": "Crear",
+    "back": "Volver",
+    "search": "Buscar",
+    "refresh": "Actualizar",
+    "export": "Exportar",
+    "download": "Descargar",
+    "confirm": "Confirmar",
+    "close": "Cerrar",
+    "loading": "Cargando...",
+    "processing": "Procesando..."
+  },
+  "status": {
+    "validado": "Validado",
+    "aRevisar": "Pendiente de Revisión",
+    "rejeitado": "Rechazado",
+    "corrigir": "Por Corregir",
+    "duplicado": "Duplicado",
+    "ativo": "Activo",
+    "inativo": "Inactivo",
+    "concluido": "Completado",
+    "erro": "Error",
+    "processando": "Procesando",
+    "recebido": "Recibido"
+  },
+  "roles": {
+    "admin": "Administrador",
+    "steward": "Data Steward",
+    "viewer": "Visualizador",
+    "adminDesc": "Acceso total al sistema",
+    "stewardDesc": "Validación y corrección de datos",
+    "viewerDesc": "Solo consulta"
+  },
+  "errors": {
+    "generic": "Ocurrió un error. Inténtalo de nuevo.",
+    "notFound": "Registro no encontrado",
+    "unauthorized": "No autorizado",
+    "forbidden": "Acceso denegado",
+    "networkError": "Error de conexión",
+    "sessionExpired": "Sesión expirada",
+    "loginFailed": "Error al iniciar sesión",
+    "authContextError": "useAuth debe ser usado dentro de un AuthProvider"
+  },
+  "empty": {
+    "noData": "No se encontraron datos",
+    "noRecords": "No se encontraron registros",
+    "noResults": "No se encontraron resultados"
+  },
+  "labels": {
+    "score": "Score",
+    "qualityScore": "Score de Calidad",
+    "actions": "Acciones",
+    "details": "Detalles",
+    "date": "Fecha",
+    "user": "Usuario",
+    "status": "Estado",
+    "total": "Total",
+    "selected": "seleccionado",
+    "selected_plural": "seleccionados"
+  },
+  "notFound": {
+    "title": "404 - Página no encontrada",
+    "message": "La página que buscas no existe.",
+    "backToStart": "Volver al inicio"
+  },
+  "language": {
+    "select": "Idioma",
+    "ptBR": "Português (BR)",
+    "en": "English",
+    "es": "Español"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Dashboard",
+  "subtitle": "Visão geral do sistema de validação MDM",
+  "loading": "Carregando estatísticas...",
+  "error": "Erro ao carregar estatísticas",
+  "cards": {
+    "totalHcps": "Total HCPs",
+    "validated": "Validados",
+    "pendingReview": "Pendentes de Revisão",
+    "duplicates": "Duplicados Identificados"
+  },
+  "sections": {
+    "statusDistribution": "Distribuição por Status",
+    "systemUsers": "Usuários do Sistema",
+    "recentUploads": "Uploads Recentes"
+  },
+  "stats": {
+    "validationRate": "Taxa de Validação",
+    "activeUsers": "Usuários ativos",
+    "totalUsers": "Total",
+    "ofTotal": "do total"
+  },
+  "table": {
+    "file": "Arquivo",
+    "user": "Usuário",
+    "status": "Status",
+    "records": "Registros",
+    "date": "Data"
+  },
+  "empty": {
+    "noUploads": "Nenhum upload realizado",
+    "goToUpload": "Ir para upload"
+  }
+}

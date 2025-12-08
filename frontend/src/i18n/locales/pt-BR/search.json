@@ -1,0 +1,44 @@
+{
+  "title": "Buscar Registros HCP",
+  "subtitle": "Pesquise e selecione registros para validação",
+  "form": {
+    "searchType": "Tipo de busca",
+    "searchTypeName": "Nome",
+    "searchTypeCrm": "CRM",
+    "searchTypeId": "ID",
+    "placeholder": "Digite para buscar...",
+    "statusFilter": "Filtrar por status",
+    "allStatus": "Todos os status",
+    "searchButton": "Buscar"
+  },
+  "compare": {
+    "button": "Comparar Selecionados",
+    "selectTwo": "Selecione dois registros para comparar"
+  },
+  "table": {
+    "select": "Selecionar",
+    "id": "ID",
+    "name": "Nome",
+    "primaryCrm": "CRM Principal",
+    "score": "Score",
+    "status": "Status",
+    "actions": "Ações",
+    "viewDetails": "Ver detalhes"
+  },
+  "pagination": {
+    "showing": "Mostrando",
+    "to": "a",
+    "of": "de",
+    "records": "registros",
+    "page": "Página",
+    "previous": "Anterior",
+    "next": "Próxima"
+  },
+  "empty": {
+    "noResults": "Nenhum registro encontrado",
+    "typeToSearch": "Digite para buscar registros"
+  },
+  "errors": {
+    "loadFailed": "Erro ao buscar registros"
+  }
+}

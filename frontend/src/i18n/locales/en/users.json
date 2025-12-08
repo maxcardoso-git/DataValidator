@@ -1,0 +1,41 @@
+{
+  "title": "Manage Users",
+  "subtitle": "Create and manage system users",
+  "buttons": {
+    "newUser": "New User",
+    "edit": "Edit",
+    "activate": "Activate",
+    "deactivate": "Deactivate"
+  },
+  "table": {
+    "username": "Username",
+    "role": "Role",
+    "status": "Status",
+    "createdAt": "Created at",
+    "actions": "Actions"
+  },
+  "modal": {
+    "newUser": "New User",
+    "editUser": "Edit User"
+  },
+  "form": {
+    "username": "Username",
+    "usernamePlaceholder": "Username",
+    "password": "Password",
+    "passwordPlaceholder": "Password",
+    "passwordHelp": "leave blank to keep current",
+    "role": "Role",
+    "selectRole": "Select a role"
+  },
+  "messages": {
+    "created": "User created successfully!",
+    "updated": "User updated successfully!",
+    "activated": "User activated",
+    "deactivated": "User deactivated"
+  },
+  "errors": {
+    "loadFailed": "Error loading users",
+    "saveFailed": "Error saving user",
+    "toggleFailed": "Error changing user status"
+  }
+}

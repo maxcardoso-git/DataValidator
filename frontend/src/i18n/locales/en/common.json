@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "search": "Search HCPs",
+    "upload": "Data Upload",
+    "users": "Users",
+    "dashboard": "Dashboard"
+  },
+  "sidebar": {
+    "title": "MDM Validation",
+    "company": "Close-Up International"
+  },
+  "auth": {
+    "logout": "Logout",
+    "role": "Role",
+    "loginSuccess": "Login successful!",
+    "logoutSuccess": "Logout successful!"
+  },
+  "buttons": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "create": "Create",
+    "back": "Back",
+    "search": "Search",
+    "refresh": "Refresh",
+    "export": "Export",
+    "download": "Download",
+    "confirm": "Confirm",
+    "close": "Close",
+    "loading": "Loading...",
+    "processing": "Processing..."
+  },
+  "status": {
+    "validado": "Validated",
+    "aRevisar": "Pending Review",
+    "rejeitado": "Rejected",
+    "corrigir": "Needs Correction",
+    "duplicado": "Duplicate",
+    "ativo": "Active",
+    "inativo": "Inactive",
+    "concluido": "Completed",
+    "erro": "Error",
+    "processando": "Processing",
+    "recebido": "Received"
+  },
+  "roles": {
+    "admin": "Administrator",
+    "steward": "Data Steward",
+    "viewer": "Viewer",
+    "adminDesc": "Full system access",
+    "stewardDesc": "Data validation and correction",
+    "viewerDesc": "Read-only access"
+  },
+  "errors": {
+    "generic": "An error occurred. Please try again.",
+    "notFound": "Record not found",
+    "unauthorized": "Unauthorized",
+    "forbidden": "Access denied",
+    "networkError": "Connection error",
+    "sessionExpired": "Session expired",
+    "loginFailed": "Login failed",
+    "authContextError": "useAuth must be used within an AuthProvider"
+  },
+  "empty": {
+    "noData": "No data found",
+    "noRecords": "No records found",
+    "noResults": "No results found"
+  },
+  "labels": {
+    "score": "Score",
+    "qualityScore": "Quality Score",
+    "actions": "Actions",
+    "details": "Details",
+    "date": "Date",
+    "user": "User",
+    "status": "Status",
+    "total": "Total",
+    "selected": "selected",
+    "selected_plural": "selected"
+  },
+  "notFound": {
+    "title": "404 - Page Not Found",
+    "message": "The page you are looking for does not exist.",
+    "backToStart": "Back to Home"
+  },
+  "language": {
+    "select": "Language",
+    "ptBR": "Português (BR)",
+    "en": "English",
+    "es": "Español"
+  }
+}

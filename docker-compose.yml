@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  # MongoDB
+  mongodb:
+    image: mongo:7.0
+    container_name: mdm-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: mdm_validation
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - mdm-network
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: mdm-backend
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - MONGO_URI=mongodb://mongodb:27017/mdm_validation
+      - JWT_SECRET=${JWT_SECRET:-sua_chave_secreta_muito_segura_para_producao}
+      - JWT_EXPIRATION=60m
+      - PORT=3001
+      - MAX_FILE_SIZE_MB=50
+      - FRONTEND_URL=http://localhost:5173
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongodb
+    networks:
+      - mdm-network
+    volumes:
+      - uploads_data:/app/uploads
+
+  # Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: mdm-frontend
+    restart: unless-stopped
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    networks:
+      - mdm-network
+
+volumes:
+  mongodb_data:
+  uploads_data:
+
+networks:
+  mdm-network:
+    driver: bridge

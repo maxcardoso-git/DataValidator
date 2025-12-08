@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "search": "Buscar HCPs",
+    "upload": "Upload de Dados",
+    "users": "Usuários",
+    "dashboard": "Dashboard"
+  },
+  "sidebar": {
+    "title": "MDM Validation",
+    "company": "Close-Up International"
+  },
+  "auth": {
+    "logout": "Sair",
+    "role": "Role",
+    "loginSuccess": "Login realizado com sucesso!",
+    "logoutSuccess": "Logout realizado com sucesso!"
+  },
+  "buttons": {
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "create": "Criar",
+    "back": "Voltar",
+    "search": "Buscar",
+    "refresh": "Atualizar",
+    "export": "Exportar",
+    "download": "Download",
+    "confirm": "Confirmar",
+    "close": "Fechar",
+    "loading": "Carregando...",
+    "processing": "Processando..."
+  },
+  "status": {
+    "validado": "Validado",
+    "aRevisar": "A Revisar",
+    "rejeitado": "Rejeitado",
+    "corrigir": "Corrigir",
+    "duplicado": "Duplicado",
+    "ativo": "Ativo",
+    "inativo": "Inativo",
+    "concluido": "Concluído",
+    "erro": "Erro",
+    "processando": "Processando",
+    "recebido": "Recebido"
+  },
+  "roles": {
+    "admin": "Administrador",
+    "steward": "Data Steward",
+    "viewer": "Visualizador",
+    "adminDesc": "Acesso total ao sistema",
+    "stewardDesc": "Validação e correção de dados",
+    "viewerDesc": "Apenas consulta"
+  },
+  "errors": {
+    "generic": "Ocorreu um erro. Tente novamente.",
+    "notFound": "Registro não encontrado",
+    "unauthorized": "Não autorizado",
+    "forbidden": "Acesso negado",
+    "networkError": "Erro de conexão",
+    "sessionExpired": "Sessão expirada",
+    "loginFailed": "Erro ao fazer login",
+    "authContextError": "useAuth deve ser usado dentro de um AuthProvider"
+  },
+  "empty": {
+    "noData": "Nenhum dado encontrado",
+    "noRecords": "Nenhum registro encontrado",
+    "noResults": "Nenhum resultado encontrado"
+  },
+  "labels": {
+    "score": "Score",
+    "qualityScore": "Score de Qualidade",
+    "actions": "Ações",
+    "details": "Detalhes",
+    "date": "Data",
+    "user": "Usuário",
+    "status": "Status",
+    "total": "Total",
+    "selected": "selecionado",
+    "selected_plural": "selecionados"
+  },
+  "notFound": {
+    "title": "404 - Página não encontrada",
+    "message": "A página que você está procurando não existe.",
+    "backToStart": "Voltar ao início"
+  },
+  "language": {
+    "select": "Idioma",
+    "ptBR": "Português (BR)",
+    "en": "English",
+    "es": "Español"
+  }
+}

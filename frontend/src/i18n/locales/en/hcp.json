@@ -1,0 +1,148 @@
+{
+  "title": "HCP Validation",
+  "backToSearch": "Back to search",
+  "loading": "Loading...",
+  "tabs": {
+    "general": "General Data",
+    "crm": "CRM",
+    "addresses": "Addresses",
+    "phones": "Phones",
+    "emails": "Emails",
+    "organizations": "Organizations",
+    "additional": "Additional Info",
+    "audit": "Audit"
+  },
+  "general": {
+    "id": "HCP ID",
+    "name": "Physician Name",
+    "status": "Status",
+    "qualityScore": "Quality Score"
+  },
+  "crm": {
+    "title": "CRM Records",
+    "registration": "Registration",
+    "state": "State",
+    "type": "Type",
+    "status": "Status",
+    "graduationYear": "Graduation Year",
+    "institution": "Institution",
+    "specialties": "Specialties",
+    "empty": "No CRM registered"
+  },
+  "address": {
+    "title": "Addresses",
+    "type": "Type",
+    "street": "Street",
+    "number": "Number",
+    "complement": "Complement",
+    "neighborhood": "Neighborhood",
+    "city": "City",
+    "state": "State",
+    "zipCode": "ZIP Code",
+    "country": "Country",
+    "full": "Full Address",
+    "empty": "No addresses registered"
+  },
+  "phone": {
+    "title": "Phones",
+    "number": "Phone",
+    "empty": "No phones registered"
+  },
+  "email": {
+    "title": "Emails",
+    "address": "Email",
+    "empty": "No emails registered"
+  },
+  "organization": {
+    "title": "Organizations",
+    "name": "Company Name",
+    "tradeName": "Trade Name",
+    "cnes": "CNES",
+    "cnpj": "CNPJ",
+    "competence": "Competence",
+    "bond": "Bond",
+    "activity": "Activity",
+    "status": "Status",
+    "specialty": "Specialty",
+    "address": "Address",
+    "zipCode": "ZIP Code",
+    "empty": "No organizations registered"
+  },
+  "additional": {
+    "title": "Additional Information",
+    "laboratory": "Laboratory",
+    "loadDate": "Load Date",
+    "region": "Region",
+    "supervisor": "Supervisor",
+    "active": "Active",
+    "name": "Name",
+    "closeupRegion": "Close-Up Region",
+    "closeupId": "Close-Up ID",
+    "origin": "Origin",
+    "organization": "Organization",
+    "empty": "No additional information"
+  },
+  "validation": {
+    "title": "Validation Rules",
+    "runValidation": "Validate",
+    "running": "Validating...",
+    "noRules": "Click 'Validate' to run the validation rules.",
+    "lastRun": "Last validation",
+    "passed": "Passed",
+    "failed": "Failed",
+    "errors": "Errors",
+    "warnings": "Warnings"
+  },
+  "decision": {
+    "title": "Record Decision",
+    "selectItems": "Select items for the decision",
+    "selectAll": "Select all",
+    "comments": "Comments",
+    "commentsPlaceholder": "Comments about the decision...",
+    "relatedHcp": "Related HCP",
+    "relatedHcpPlaceholder": "E.g.: HCP002",
+    "relatedHcpRequired": "Please enter the related HCP ID",
+    "actions": {
+      "validate": "Validate",
+      "correct": "Correct",
+      "reject": "Reject",
+      "duplicate": "Duplicate"
+    },
+    "selected": "{{count}} selected",
+    "selected_plural": "{{count}} selected"
+  },
+  "history": {
+    "title": "Decision History",
+    "user": "User",
+    "date": "Date",
+    "type": "Type",
+    "comments": "Comments",
+    "items": "Items",
+    "linkedHcp": "Linked HCP",
+    "empty": "No decisions recorded"
+  },
+  "audit": {
+    "title": "Audit Trail",
+    "action": "Action",
+    "user": "User",
+    "date": "Date",
+    "details": "Details",
+    "empty": "No audit records"
+  },
+  "messages": {
+    "validationSuccess": "Validation completed successfully!",
+    "decisionSuccess": "Decision recorded successfully!",
+    "pdfSuccess": "PDF generated successfully!"
+  },
+  "errors": {
+    "loadFailed": "Error loading record",
+    "validationFailed": "Error running validation",
+    "decisionFailed": "Error recording decision",
+    "pdfFailed": "Error generating PDF",
+    "passwordRequired": "Password is required"
+  },
+  "pdf": {
+    "generate": "PDF",
+    "generating": "Generating..."
+  }
+}

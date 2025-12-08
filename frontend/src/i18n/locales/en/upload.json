@@ -1,0 +1,42 @@
+{
+  "title": "Data Upload",
+  "subtitle": "Import JSON files with HCP data",
+  "dropzone": {
+    "dragDrop": "Drag and drop a JSON file here, or",
+    "selectFile": "Select File",
+    "selectedFile": "Selected file",
+    "maxSize": "Maximum size: 50MB"
+  },
+  "buttons": {
+    "upload": "Upload File",
+    "uploading": "Uploading..."
+  },
+  "instructions": {
+    "title": "Instructions",
+    "line1": "The system accepts JSON files with <code>_id</code> or <code>id_hcp</code> as identifier.",
+    "line2": "Files can contain a single object or an array of HCP objects.",
+    "line3": "Existing fields will be updated; new records will be created."
+  },
+  "history": {
+    "title": "Upload History",
+    "status": "Status",
+    "file": "File",
+    "user": "User",
+    "processed": "Processed",
+    "errors": "Errors",
+    "date": "Date"
+  },
+  "messages": {
+    "success": "Upload complete! {{count}} records processed.",
+    "successWithErrors": "Upload complete! {{count}} records processed, {{errors}} with errors."
+  },
+  "errors": {
+    "onlyJson": "Only JSON files are allowed",
+    "selectFile": "Please select a file",
+    "uploadFailed": "Upload failed",
+    "loadHistoryFailed": "Error loading history"
+  },
+  "empty": {
+    "noUploads": "No uploads yet"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Carga de Datos",
+  "subtitle": "Importa archivos JSON con datos de HCPs",
+  "dropzone": {
+    "dragDrop": "Arrastra y suelta un archivo JSON aquí, o",
+    "selectFile": "Seleccionar Archivo",
+    "selectedFile": "Archivo seleccionado",
+    "maxSize": "Tamaño máximo: 50MB"
+  },
+  "buttons": {
+    "upload": "Enviar Archivo",
+    "uploading": "Enviando..."
+  },
+  "instructions": {
+    "title": "Instrucciones",
+    "line1": "El sistema acepta archivos JSON con <code>_id</code> o <code>id_hcp</code> como identificador.",
+    "line2": "Los archivos pueden contener un único objeto o un array de objetos HCP.",
+    "line3": "Los campos existentes serán actualizados; los nuevos registros serán creados."
+  },
+  "history": {
+    "title": "Historial de Cargas",
+    "status": "Estado",
+    "file": "Archivo",
+    "user": "Usuario",
+    "processed": "Procesados",
+    "errors": "Errores",
+    "date": "Fecha"
+  },
+  "messages": {
+    "success": "Carga completada! {{count}} registros procesados.",
+    "successWithErrors": "Carga completada! {{count}} registros procesados, {{errors}} con error."
+  },
+  "errors": {
+    "onlyJson": "Solo se permiten archivos JSON",
+    "selectFile": "Selecciona un archivo",
+    "uploadFailed": "Error al cargar archivo",
+    "loadHistoryFailed": "Error al cargar historial"
+  },
+  "empty": {
+    "noUploads": "Ninguna carga realizada"
+  }
+}
