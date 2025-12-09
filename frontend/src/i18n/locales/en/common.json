@@ -29,7 +29,9 @@
     "confirm": "Confirm",
     "close": "Close",
     "loading": "Loading...",
-    "processing": "Processing..."
+    "processing": "Processing...",
+    "all": "All",
+    "clear": "Clear"
   },
   "status": {
     "validado": "Validated",

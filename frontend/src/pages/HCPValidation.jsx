@@ -72,6 +72,10 @@ export default function HCPValidation() {
     informacao_adicional: []
   });
 
+  // Filtros para Info Adicional
+  const [filterOrigin, setFilterOrigin] = useState('');
+  const [filterLaboratory, setFilterLaboratory] = useState('');
+
   useEffect(() => {
     fetchData();
   }, [id]);
@@ -725,49 +729,106 @@ export default function HCPValidation() {
               {/* Info Adicional */}
               {activeTab === 'info' && (
                 <div className="space-y-4">
-                  {hcp.informacao_adicional?.length > 0 ? (
-                    hcp.informacao_adicional.map((info, idx) => (
-                      <div
-                        key={idx}
-                        onClick={() => toggleItemSelection('informacao_adicional', idx)}
-                        className={`p-4 rounded-lg cursor-pointer transition-colors ${
-                          selectedItems.informacao_adicional.includes(idx)
-                            ? 'bg-primary-50 border-2 border-primary-300'
-                            : 'bg-gray-50 border-2 border-transparent hover:bg-gray-100'
-                        }`}
-                      >
-                        <div className="flex items-center gap-2 mb-3">
-                          {selectedItems.informacao_adicional.includes(idx) ? (
-                            <CheckSquare className="h-5 w-5 text-primary-600" />
-                          ) : (
-                            <Square className="h-5 w-5 text-gray-400" />
-                          )}
-                          <span className="badge badge-gray">#{info.ordem || idx + 1}</span>
-                        </div>
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
-                          <div>
-                            <label className="text-xs text-gray-500">{t('additional.name')}</label>
-                            <p className="font-medium">{info.nome || '-'}</p>
-                          </div>
-                          <div>
-                            <label className="text-xs text-gray-500">{t('additional.origin')}</label>
-                            <p>{info.origem || '-'}</p>
-                          </div>
-                          <div>
-                            <label className="text-xs text-gray-500">{t('additional.laboratory')}</label>
-                            <p>{info.laboratorio || '-'}</p>
-                          </div>
-                          <div>
-                            <label className="text-xs text-gray-500">{t('additional.closeupId')}</label>
-                            <p className="font-mono text-xs">{info.id_closeup || '-'}</p>
-                          </div>
-                          <div>
-                            <label className="text-xs text-gray-500">{t('additional.closeupRegion')}</label>
-                            <p>{info.regiao_closeup || '-'}</p>
-                          </div>
-                        </div>
+                  {/* Filtros */}
+                  {hcp.informacao_adicional?.length > 0 && (
+                    <div className="flex flex-wrap gap-4 p-4 bg-gray-100 rounded-lg">
+                      <div className="flex-1 min-w-[200px]">
+                        <label className="text-xs text-gray-500 block mb-1">{t('additional.origin')}</label>
+                        <select
+                          value={filterOrigin}
+                          onChange={(e) => setFilterOrigin(e.target.value)}
+                          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                        >
+                          <option value="">{t('common:buttons.all', 'Todos')}</option>
+                          {[...new Set(hcp.informacao_adicional.map(i => i.origem).filter(Boolean))].sort().map(origin => (
+                            <option key={origin} value={origin}>{origin}</option>
+                          ))}
+                        </select>
                       </div>
-                    ))
+                      <div className="flex-1 min-w-[200px]">
+                        <label className="text-xs text-gray-500 block mb-1">{t('additional.laboratory')}</label>
+                        <select
+                          value={filterLaboratory}
+                          onChange={(e) => setFilterLaboratory(e.target.value)}
+                          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                        >
+                          <option value="">{t('common:buttons.all', 'Todos')}</option>
+                          {[...new Set(hcp.informacao_adicional.map(i => i.laboratorio).filter(Boolean))].sort().map(lab => (
+                            <option key={lab} value={lab}>{lab}</option>
+                          ))}
+                        </select>
+                      </div>
+                      {(filterOrigin || filterLaboratory) && (
+                        <div className="flex items-end">
+                          <button
+                            onClick={() => { setFilterOrigin(''); setFilterLaboratory(''); }}
+                            className="px-3 py-2 text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded-lg transition-colors"
+                          >
+                            {t('common:buttons.clear', 'Limpar')}
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Lista filtrada */}
+                  {hcp.informacao_adicional?.length > 0 ? (
+                    (() => {
+                      const filteredInfos = hcp.informacao_adicional
+                        .map((info, idx) => ({ ...info, originalIndex: idx }))
+                        .filter(info => {
+                          if (filterOrigin && info.origem !== filterOrigin) return false;
+                          if (filterLaboratory && info.laboratorio !== filterLaboratory) return false;
+                          return true;
+                        });
+
+                      if (filteredInfos.length === 0) {
+                        return <p className="text-gray-500 text-center py-4">{t('common:empty.noResults')}</p>;
+                      }
+
+                      return filteredInfos.map((info) => (
+                        <div
+                          key={info.originalIndex}
+                          onClick={() => toggleItemSelection('informacao_adicional', info.originalIndex)}
+                          className={`p-4 rounded-lg cursor-pointer transition-colors ${
+                            selectedItems.informacao_adicional.includes(info.originalIndex)
+                              ? 'bg-primary-50 border-2 border-primary-300'
+                              : 'bg-gray-50 border-2 border-transparent hover:bg-gray-100'
+                          }`}
+                        >
+                          <div className="flex items-center gap-2 mb-3">
+                            {selectedItems.informacao_adicional.includes(info.originalIndex) ? (
+                              <CheckSquare className="h-5 w-5 text-primary-600" />
+                            ) : (
+                              <Square className="h-5 w-5 text-gray-400" />
+                            )}
+                            <span className="badge badge-gray">#{info.ordem || info.originalIndex + 1}</span>
+                          </div>
+                          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+                            <div>
+                              <label className="text-xs text-gray-500">{t('additional.name')}</label>
+                              <p className="font-medium">{info.nome || '-'}</p>
+                            </div>
+                            <div>
+                              <label className="text-xs text-gray-500">{t('additional.origin')}</label>
+                              <p>{info.origem || '-'}</p>
+                            </div>
+                            <div>
+                              <label className="text-xs text-gray-500">{t('additional.laboratory')}</label>
+                              <p>{info.laboratorio || '-'}</p>
+                            </div>
+                            <div>
+                              <label className="text-xs text-gray-500">{t('additional.closeupId')}</label>
+                              <p className="font-mono text-xs">{info.id_closeup || '-'}</p>
+                            </div>
+                            <div>
+                              <label className="text-xs text-gray-500">{t('additional.closeupRegion')}</label>
+                              <p>{info.regiao_closeup || '-'}</p>
+                            </div>
+                          </div>
+                        </div>
+                      ));
+                    })()
                   ) : (
                     <p className="text-gray-500">{t('additional.empty')}</p>
                   )}
