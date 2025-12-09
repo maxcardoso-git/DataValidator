@@ -15,7 +15,7 @@ router.get('/search', [
   authenticate,
   hasPermission('SEARCH_HCP'),
   query('q').optional().trim(),
-  query('type').optional().isIn(['nome', 'crm', 'id']),
+  query('type').optional().isIn(['nome', 'crm', 'id', 'telefone', 'email', 'endereco', 'organizacao', 'cnes', 'cnpj', 'todos']),
   query('status').optional().isIn(['A_REVISAR', 'VALIDADO', 'REJEITADO', 'CORRIGIR', 'DUPLICADO']),
   query('limit').optional().isInt({ min: 1, max: 100 }).toInt(),
   query('offset').optional().isInt({ min: 0 }).toInt()
@@ -32,17 +32,65 @@ router.get('/search', [
 
     // Filtro de busca
     if (q) {
+      const searchRegex = { $regex: q, $options: 'i' };
+
       switch (type) {
         case 'id':
-          filter.id_hcp = { $regex: q, $options: 'i' };
+          filter.id_hcp = searchRegex;
           break;
         case 'crm':
-          filter['crm.inscricao'] = { $regex: q, $options: 'i' };
+          filter['crm.inscricao'] = searchRegex;
+          break;
+        case 'telefone':
+          filter['telefones.telefone'] = searchRegex;
+          break;
+        case 'email':
+          filter['emails.email'] = searchRegex;
+          break;
+        case 'endereco':
+          filter.$or = [
+            { 'enderecos.endereco': searchRegex },
+            { 'enderecos.logradouro': searchRegex },
+            { 'enderecos.bairro': searchRegex },
+            { 'enderecos.municipio': searchRegex },
+            { 'enderecos.cep': searchRegex }
+          ];
+          break;
+        case 'organizacao':
+          filter.$or = [
+            { 'organizacoes.nome_fantasia': searchRegex },
+            { 'organizacoes.nome_razao': searchRegex }
+          ];
+          break;
+        case 'cnes':
+          filter['organizacoes.cnes'] = searchRegex;
+          break;
+        case 'cnpj':
+          filter['organizacoes.cnpj'] = searchRegex;
+          break;
+        case 'todos':
+          // Busca em todos os campos principais
+          filter.$or = [
+            { nome_medico: searchRegex },
+            { nome_normalizado: { $regex: q.toUpperCase(), $options: 'i' } },
+            { id_hcp: searchRegex },
+            { 'crm.inscricao': searchRegex },
+            { 'telefones.telefone': searchRegex },
+            { 'emails.email': searchRegex },
+            { 'enderecos.endereco': searchRegex },
+            { 'enderecos.logradouro': searchRegex },
+            { 'enderecos.municipio': searchRegex },
+            { 'enderecos.cep': searchRegex },
+            { 'organizacoes.nome_fantasia': searchRegex },
+            { 'organizacoes.nome_razao': searchRegex },
+            { 'organizacoes.cnes': searchRegex },
+            { 'organizacoes.cnpj': searchRegex }
+          ];
           break;
         case 'nome':
         default:
           filter.$or = [
-            { nome_medico: { $regex: q, $options: 'i' } },
+            { nome_medico: searchRegex },
             { nome_normalizado: { $regex: q.toUpperCase(), $options: 'i' } }
           ];
           break;

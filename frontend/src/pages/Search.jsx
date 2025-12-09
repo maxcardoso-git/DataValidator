@@ -30,9 +30,16 @@ export default function Search() {
   ];
 
   const SEARCH_TYPES = [
+    { value: 'todos', label: t('form.searchTypeAll') },
     { value: 'nome', label: t('form.searchTypeName') },
     { value: 'crm', label: t('form.searchTypeCrm') },
-    { value: 'id', label: t('form.searchTypeId') }
+    { value: 'id', label: t('form.searchTypeId') },
+    { value: 'telefone', label: t('form.searchTypePhone') },
+    { value: 'email', label: t('form.searchTypeEmail') },
+    { value: 'endereco', label: t('form.searchTypeAddress') },
+    { value: 'organizacao', label: t('form.searchTypeOrganization') },
+    { value: 'cnes', label: t('form.searchTypeCnes') },
+    { value: 'cnpj', label: t('form.searchTypeCnpj') }
   ];
 
   const [query, setQuery] = useState(searchParams.get('q') || '');
@@ -158,7 +165,7 @@ export default function Search() {
             </div>
 
             {/* Search Type */}
-            <div className="w-full md:w-40">
+            <div className="w-full md:w-52">
               <select
                 value={searchType}
                 onChange={(e) => setSearchType(e.target.value)}
