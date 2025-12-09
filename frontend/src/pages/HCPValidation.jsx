@@ -75,10 +75,17 @@ export default function HCPValidation() {
   // Filtros para Info Adicional
   const [filterOrigin, setFilterOrigin] = useState('');
   const [filterLaboratory, setFilterLaboratory] = useState('');
+  const [infoPage, setInfoPage] = useState(1);
+  const ITEMS_PER_PAGE = 20;
 
   useEffect(() => {
     fetchData();
   }, [id]);
+
+  // Reset página quando filtros mudam
+  useEffect(() => {
+    setInfoPage(1);
+  }, [filterOrigin, filterLaboratory]);
 
   const fetchData = async () => {
     setLoading(true);
@@ -771,7 +778,7 @@ export default function HCPValidation() {
                     </div>
                   )}
 
-                  {/* Lista filtrada */}
+                  {/* Lista filtrada com paginação */}
                   {hcp.informacao_adicional?.length > 0 ? (
                     (() => {
                       const filteredInfos = hcp.informacao_adicional
@@ -786,48 +793,89 @@ export default function HCPValidation() {
                         return <p className="text-gray-500 text-center py-4">{t('common:empty.noResults')}</p>;
                       }
 
-                      return filteredInfos.map((info) => (
-                        <div
-                          key={info.originalIndex}
-                          onClick={() => toggleItemSelection('informacao_adicional', info.originalIndex)}
-                          className={`p-4 rounded-lg cursor-pointer transition-colors ${
-                            selectedItems.informacao_adicional.includes(info.originalIndex)
-                              ? 'bg-primary-50 border-2 border-primary-300'
-                              : 'bg-gray-50 border-2 border-transparent hover:bg-gray-100'
-                          }`}
-                        >
-                          <div className="flex items-center gap-2 mb-3">
-                            {selectedItems.informacao_adicional.includes(info.originalIndex) ? (
-                              <CheckSquare className="h-5 w-5 text-primary-600" />
-                            ) : (
-                              <Square className="h-5 w-5 text-gray-400" />
-                            )}
-                            <span className="badge badge-gray">#{info.ordem || info.originalIndex + 1}</span>
+                      const totalPages = Math.ceil(filteredInfos.length / ITEMS_PER_PAGE);
+                      const startIndex = (infoPage - 1) * ITEMS_PER_PAGE;
+                      const paginatedInfos = filteredInfos.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+                      return (
+                        <>
+                          {/* Contador de resultados */}
+                          <div className="text-sm text-gray-500 mb-2">
+                            {t('common:labels.showing', {
+                              from: startIndex + 1,
+                              to: Math.min(startIndex + ITEMS_PER_PAGE, filteredInfos.length),
+                              total: filteredInfos.length
+                            })}
                           </div>
-                          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
-                            <div>
-                              <label className="text-xs text-gray-500">{t('additional.name')}</label>
-                              <p className="font-medium">{info.nome || '-'}</p>
+
+                          {/* Lista */}
+                          {paginatedInfos.map((info) => (
+                            <div
+                              key={info.originalIndex}
+                              onClick={() => toggleItemSelection('informacao_adicional', info.originalIndex)}
+                              className={`p-4 rounded-lg cursor-pointer transition-colors ${
+                                selectedItems.informacao_adicional.includes(info.originalIndex)
+                                  ? 'bg-primary-50 border-2 border-primary-300'
+                                  : 'bg-gray-50 border-2 border-transparent hover:bg-gray-100'
+                              }`}
+                            >
+                              <div className="flex items-center gap-2 mb-3">
+                                {selectedItems.informacao_adicional.includes(info.originalIndex) ? (
+                                  <CheckSquare className="h-5 w-5 text-primary-600" />
+                                ) : (
+                                  <Square className="h-5 w-5 text-gray-400" />
+                                )}
+                                <span className="badge badge-gray">#{info.ordem || info.originalIndex + 1}</span>
+                              </div>
+                              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+                                <div>
+                                  <label className="text-xs text-gray-500">{t('additional.name')}</label>
+                                  <p className="font-medium">{info.nome || '-'}</p>
+                                </div>
+                                <div>
+                                  <label className="text-xs text-gray-500">{t('additional.origin')}</label>
+                                  <p>{info.origem || '-'}</p>
+                                </div>
+                                <div>
+                                  <label className="text-xs text-gray-500">{t('additional.laboratory')}</label>
+                                  <p>{info.laboratorio || '-'}</p>
+                                </div>
+                                <div>
+                                  <label className="text-xs text-gray-500">{t('additional.closeupId')}</label>
+                                  <p className="font-mono text-xs">{info.id_closeup || '-'}</p>
+                                </div>
+                                <div>
+                                  <label className="text-xs text-gray-500">{t('additional.closeupRegion')}</label>
+                                  <p>{info.regiao_closeup || '-'}</p>
+                                </div>
+                              </div>
                             </div>
-                            <div>
-                              <label className="text-xs text-gray-500">{t('additional.origin')}</label>
-                              <p>{info.origem || '-'}</p>
+                          ))}
+
+                          {/* Paginação */}
+                          {totalPages > 1 && (
+                            <div className="flex items-center justify-center gap-2 pt-4 border-t border-gray-200">
+                              <button
+                                onClick={() => setInfoPage(p => Math.max(1, p - 1))}
+                                disabled={infoPage === 1}
+                                className="px-3 py-1 text-sm rounded border border-gray-300 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+                              >
+                                {t('common:buttons.previous', 'Anterior')}
+                              </button>
+                              <span className="text-sm text-gray-600">
+                                {t('common:labels.page', { current: infoPage, total: totalPages })}
+                              </span>
+                              <button
+                                onClick={() => setInfoPage(p => Math.min(totalPages, p + 1))}
+                                disabled={infoPage === totalPages}
+                                className="px-3 py-1 text-sm rounded border border-gray-300 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+                              >
+                                {t('common:buttons.next', 'Próximo')}
+                              </button>
                             </div>
-                            <div>
-                              <label className="text-xs text-gray-500">{t('additional.laboratory')}</label>
-                              <p>{info.laboratorio || '-'}</p>
-                            </div>
-                            <div>
-                              <label className="text-xs text-gray-500">{t('additional.closeupId')}</label>
-                              <p className="font-mono text-xs">{info.id_closeup || '-'}</p>
-                            </div>
-                            <div>
-                              <label className="text-xs text-gray-500">{t('additional.closeupRegion')}</label>
-                              <p>{info.regiao_closeup || '-'}</p>
-                            </div>
-                          </div>
-                        </div>
-                      ));
+                          )}
+                        </>
+                      );
                     })()
                   ) : (
                     <p className="text-gray-500">{t('additional.empty')}</p>

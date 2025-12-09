@@ -31,7 +31,9 @@
     "loading": "Carregando...",
     "processing": "Processando...",
     "all": "Todos",
-    "clear": "Limpar"
+    "clear": "Limpar",
+    "previous": "Anterior",
+    "next": "Próximo"
   },
   "status": {
     "validado": "Validado",
@@ -79,7 +81,10 @@
     "status": "Status",
     "total": "Total",
     "selected": "selecionado",
-    "selected_plural": "selecionados"
+    "selected_plural": "selecionados",
+    "showing": "Exibindo",
+    "of": "de",
+    "page": "Página"
   },
   "notFound": {
     "title": "404 - Página não encontrada",

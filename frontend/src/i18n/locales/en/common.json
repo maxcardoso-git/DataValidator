@@ -31,7 +31,9 @@
     "loading": "Loading...",
     "processing": "Processing...",
     "all": "All",
-    "clear": "Clear"
+    "clear": "Clear",
+    "previous": "Previous",
+    "next": "Next"
   },
   "status": {
     "validado": "Validated",
@@ -79,7 +81,10 @@
     "status": "Status",
     "total": "Total",
     "selected": "selected",
-    "selected_plural": "selected"
+    "selected_plural": "selected",
+    "showing": "Showing",
+    "of": "of",
+    "page": "Page"
   },
   "notFound": {
     "title": "404 - Page Not Found",
