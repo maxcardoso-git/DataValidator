@@ -584,6 +584,11 @@ export default function HCPValidation() {
                         )}
                         {t('decision.selectAll')}
                       </button>
+                      {selectedItems.enderecos.length > 0 && (
+                        <span className="text-xs text-primary-600 font-medium">
+                          {t('decision.selected', { count: selectedItems.enderecos.length })}
+                        </span>
+                      )}
                     </div>
                   )}
                   {hcp.enderecos?.length > 0 ? (
@@ -597,7 +602,7 @@ export default function HCPValidation() {
                             : 'bg-gray-50 border-2 border-transparent hover:bg-gray-100'
                         }`}
                       >
-                        <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center justify-between mb-3">
                           <div className="flex items-center gap-2">
                             {selectedItems.enderecos.includes(idx) ? (
                               <CheckSquare className="h-5 w-5 text-primary-600" />
@@ -605,21 +610,82 @@ export default function HCPValidation() {
                               <Square className="h-5 w-5 text-gray-400" />
                             )}
                             <span className="badge badge-gray">#{end.ordem || idx + 1}</span>
-                            <span className="badge badge-info">{end.tipo || t('address.type')}</span>
+                            {end.tipo && <span className="badge badge-info">{end.tipo}</span>}
                           </div>
+                          {end.score !== undefined && (
+                            <span className={`text-sm font-medium ${end.score >= 80 ? 'text-green-600' : end.score >= 50 ? 'text-yellow-600' : 'text-red-600'}`}>
+                              {t('address.score')}: {end.score}
+                            </span>
+                          )}
                         </div>
-                        {end.endereco ? (
-                          <p className="text-sm font-medium">{end.endereco}</p>
-                        ) : (
-                          <>
-                            <p className="mt-2">
-                              {end.tipo} {end.logradouro}, {end.numero}
-                              {end.complemento && ` - ${end.complemento}`}
+
+                        {/* Endereço completo se disponível */}
+                        {end.endereco && (
+                          <p className="text-sm font-medium mb-3">{end.endereco}</p>
+                        )}
+
+                        {/* Campos detalhados */}
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                          {end.logradouro && (
+                            <div>
+                              <label className="text-xs text-gray-500">{t('address.street')}</label>
+                              <p>{end.logradouro}</p>
+                            </div>
+                          )}
+                          {end.numero && (
+                            <div>
+                              <label className="text-xs text-gray-500">{t('address.number')}</label>
+                              <p>{end.numero}</p>
+                            </div>
+                          )}
+                          {end.complemento && (
+                            <div>
+                              <label className="text-xs text-gray-500">{t('address.complement')}</label>
+                              <p>{end.complemento}</p>
+                            </div>
+                          )}
+                          {end.bairro && (
+                            <div>
+                              <label className="text-xs text-gray-500">{t('address.neighborhood')}</label>
+                              <p>{end.bairro}</p>
+                            </div>
+                          )}
+                          {end.municipio && (
+                            <div>
+                              <label className="text-xs text-gray-500">{t('address.city')}</label>
+                              <p>{end.municipio}</p>
+                            </div>
+                          )}
+                          {end.estado && (
+                            <div>
+                              <label className="text-xs text-gray-500">{t('address.state')}</label>
+                              <p>{end.estado}</p>
+                            </div>
+                          )}
+                          {end.cep && (
+                            <div>
+                              <label className="text-xs text-gray-500">{t('address.zipCode')}</label>
+                              <p className="font-mono">{end.cep}</p>
+                            </div>
+                          )}
+                          {end.pais && (
+                            <div>
+                              <label className="text-xs text-gray-500">{t('address.country')}</label>
+                              <p>{end.pais}</p>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Coordenadas se disponíveis */}
+                        {(end.latitude || end.longitude) && (
+                          <div className="mt-3 pt-3 border-t border-gray-200">
+                            <label className="text-xs text-gray-500">{t('address.coordinates')}</label>
+                            <p className="text-sm font-mono">
+                              {end.latitude && `${t('address.latitude')}: ${end.latitude}`}
+                              {end.latitude && end.longitude && ' | '}
+                              {end.longitude && `${t('address.longitude')}: ${end.longitude}`}
                             </p>
-                            <p className="text-sm text-gray-600">
-                              {end.bairro}, {end.municipio}/{end.estado} - {t('address.zipCode')}: {end.cep}
-                            </p>
-                          </>
+                          </div>
                         )}
                       </div>
                     ))

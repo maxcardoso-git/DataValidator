@@ -41,6 +41,10 @@
     "zipCode": "CEP",
     "country": "País",
     "full": "Endereço Completo",
+    "score": "Score",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "coordinates": "Coordenadas",
     "empty": "Nenhum endereço cadastrado"
   },
   "phone": {

@@ -41,6 +41,10 @@
     "zipCode": "Código Postal",
     "country": "País",
     "full": "Dirección Completa",
+    "score": "Score",
+    "latitude": "Latitud",
+    "longitude": "Longitud",
+    "coordinates": "Coordenadas",
     "empty": "Ninguna dirección registrada"
   },
   "phone": {

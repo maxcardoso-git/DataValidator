@@ -41,6 +41,10 @@
     "zipCode": "ZIP Code",
     "country": "Country",
     "full": "Full Address",
+    "score": "Score",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "coordinates": "Coordinates",
     "empty": "No addresses registered"
   },
   "phone": {
